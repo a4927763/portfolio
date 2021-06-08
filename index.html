@@ -71,25 +71,28 @@
       </li>
     </ul>
   </nav>
-  <menu id="menu">
-    <div id="closeList" class="closeList">
-      <img src="./img/closeBtn.png" alt="">
-    </div>
-    <div class="list">
-      <ul class="menulist">
-        <li><p class="H1">关于我们</p></li>
-        <li><p class="H1">企业介绍</p></li>
-        <li><p class="H1">线下分店</p></li>
-        <li><p class="H1">APP程式</p></li>
-        <li><p class="H1">联络我们</p></li>
-        <li>
-          <img src="./img/fb.png" alt="" srcset="">
-          <img src="./img/ig.png" alt="" srcset="">
-          <img src="./img/wechat.png" alt="" srcset="">
-        </li>
-      </ul>
-    </div>
-  </menu>
+  <div class="menuWrap">
+    <menu id="menu">
+      <div id="closeList" class="closeList">
+        <img src="./img/closeBtn.png" alt="">
+      </div>
+      <div class="list">
+        <ul class="menulist">
+          <li><p class="H1">关于我们</p></li>
+          <li><p class="H1">企业介绍</p></li>
+          <li><p class="H1">线下分店</p></li>
+          <li><p class="H1">APP程式</p></li>
+          <li><p class="H1">联络我们</p></li>
+          <li>
+            <img src="./img/fb.png" alt="" srcset="">
+            <img src="./img/ig.png" alt="" srcset="">
+            <img src="./img/wechat.png" alt="" srcset="">
+          </li>
+        </ul>
+      </div>
+    </menu>
+  </div>
+
 
 
 
@@ -283,10 +286,8 @@
 <script>
   const swiper = new Swiper(".mySwiper", {
     // slidesPerGroupSkip: 3,
-    spaceBetween: 5,
-    slidesPerView: 1.5,
-    slidesPerGroup: 1,
-
+    slidesPerView: 3,
+    slidesPerGroup: 3,
     // centeredSlides: true,
     grabCursor: true,
     scrollbar: {
@@ -294,29 +295,7 @@
     },
     breakpoints: {
     // when window width is >= 320px
-      320: {
-        slidesPerView: 1.4,
-        slidesPerGroup: 1,
-
-        spaceBetween: 10
-      },
-      // when window width is >= 480px
-      480: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-
-        spaceBetween: 20
-      },
-      // when window width is >= 640px
-      640: {
-        slidesPerView: 2.5,
-        slidesPerGroup: 2,
-        spaceBetween: 30
-      },
-      840:{
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-      },
+      
       960:{
         slidesPerView: 3.5,
         slidesPerGroup: 3,

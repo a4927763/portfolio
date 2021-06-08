@@ -1,16 +1,3 @@
-
-
-$(document).ready(function(){
-  $('#closeList').click(function(){
-    gsap.to('.menulist li', {duration: 1, x:200, opacity:0})
-    gsap.to("#menu" ,{ ease: "power1.out", duration:0.5, opacity: 0, xPercent:100,delay: 0.2});
-  });
-  $('.hamburguer').click(function(){
-    gsap.to("#menu", {ease: "sine.in",duration: 0.5,opacity: 1, xPercent:-100})
-    gsap.fromTo('.menulist li', {duration: 1, x:200, stagger:0.1}, {duration: 0.3, x:0, stagger: 0.1,delay: 0.3,opacity:1});    
-  });
-});
-
 gsap.registerPlugin(MotionPathPlugin);
 gsap.set(".cls-1", { drawSVG: 0});
 gsap.set(".waveLine1", { drawSVG: 0});
@@ -20,6 +7,30 @@ gsap.set(".line1", { drawSVG: 0});
 var tl = new TimelineMax({});
 var blowUp = new TimelineMax({});
 var closeAll = new TimelineMax({});
+var menuClose = new TimelineMax({});
+
+
+$(document).ready(function(){
+ 
+  $('.hamburguer').click(function(){
+    gsap.to(".menuWrap",{duration:0.5,ease: "sine.in", opacity: 1,display:"block"})
+    gsap.to("#menu",{ease: "sine.in",duration: 0.5,opacity: 1, xPercent:-100})
+    gsap.fromTo('.menulist li',{duration: 1, x:200, stagger:0.1}, {duration: 0.3, x:0, stagger: 0.1,delay: 0.3,opacity:1});    
+  });
+
+
+  $('#closeList').click(function(){
+    gsap.to('.menulist li', {duration: 1, x:200, opacity:0})
+    gsap.to("#menu" ,{ ease: "power1.out", duration:0.5, opacity: 0, xPercent:100})
+    gsap.to(".menuWrap",{opacity:0 , display:"none"})
+  });
+
+  // function sdDASDASDasd(){
+  //   gsap.to(".startAnimateBlock, .startAnimateWrap, .startAnimateBg, .startAnimateClose",{display:"none"})
+  // }
+  // sdDASDASDasd();
+});
+
 
 /*fullpage*/
 $('#fullpage').fullpage({
@@ -76,18 +87,16 @@ $('#fullpage').fullpage({
       gsap.to(".sloganTitle li",{delay:6.3, opacity:1,ease: "sine.in",stagger:0.3 , duration:0.3})
 
       // 第二階段 startAnimateWrap 
-      gsap.to(".startAnimateWrap",{delay:6.8, x:-1200,ease: "sine.in",duration:1.6})
-      // 8.4
+      gsap.to(".startAnimateWrap",{delay:6.8, xPercent:-100,ease: "sine.in",duration:1.6,opacity:0})
       gsap.to("#circlePath, .curcleBox, .startball",{delay:7.2,duration:0.01,display:"none"})
-
       gsap.to(".startAnimateBlock",{delay:7.5,duration:0.01, xPercent:0})
-      // startlogo
-      gsap.to(".startlogo",{delay:7.5,opacity:1})
-      gsap.to(".logoHidden",{delay:7.6,top:"-120%",duration: 0.8})
-      gsap.to(".sloganTitle2 li",{delay:7.6,top:"0",duration: 0.8})
+      
+      // 第三階段 startlogo
+      gsap.to(".startlogo",{delay:7.8,opacity:1})
+      gsap.to(".logoHidden",{delay:7.9,top:"-120%",duration: 0.8})
+      gsap.to(".sloganTitle2 li",{delay:7.9,top:"0",duration: 0.8})
 
-      closeAll.to(".startAnimateClose",{delay:8.7,width:"100vw",duration: 0.8})
-              
+      closeAll.to(".startAnimateClose",{delay:9,width:"100vw",duration: 0.8})
               .to(".startAnimateBg , .startAnimateWrap , .startAnimateBlock",{display:"none"})
               // 開門後
               .to(".startAnimateClose",{opacity:0,duration:0.5,ease: "sine.in"})
@@ -97,13 +106,20 @@ $('#fullpage').fullpage({
               .to(".homeTitle",{opacity:1,duration:0.5,ease: "sine.in"})
     }
 
-    //nav
+  
     if ( destination.index == 0 ) {
-      gsap.to("#navMove", {opacity: 0,y: -200});
-    }else{
-      gsap.to("#navMove", { opacity: 1, y: 0});
-    }
 
+      // navfix();
+      if(window.innerWidth < 576){
+        $('.navStay').css({display:'none'})
+        gsap.to("#navMove", { opacity: 1, y: 0});
+      }else{
+        gsap.to("#navMove", {opacity: 0,y: -200});
+      }
+    }else{
+        gsap.to("#navMove", { opacity: 1, y: 0});
+    }
+    
     if( destination.index == 1 ){
       gsap.to(".bgcOpacity",{ opacity:1, duration: 0.5})
       gsap.to(".mainBraText p",{ opacity:1, stagger:0.4, duration: 0.7,y:0,delay: 0.2})
