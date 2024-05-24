@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   
+    <style>
+        
+        .large-slider-container{
+            height: 100%;
+            width: 100%;
+            float: left;
+        }
+        .large-swiper {
+            overflow: hidden;
+            position: relative;
+        }
+        .swiper-slide {
+            height: fit-content;
+        }
+        .swiper-slide-inside {
+            height: 250px;
+            width: 100%;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(197, 215, 230);
+            img {
+                transition: all 0.3s;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+       
+            &:hover img{
+                width: 110%;
+                height: 110%;
+            }
+        }
+        .swiper-button-lock {
+            display: none !important;
+        }
+        .prev {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            margin: auto;
+            z-index: 4;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            svg {
+                fill:#1A1B1F;
+                width: 13px;
+            }
+        }
+        .next {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            margin: auto;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            svg {
+                fill:#1A1B1F;
+                width: 13px;
+            }
+        }
+        .wrapper {
+            position: relative;
+            color: #fff;
+        }
+        .bg-video {
+            position: absolute;
+            z-index: -1;
+        }
+        .project-block {
+            padding: 30px;
+        }
+        .project-link {
+            display: inline-block;
+            svg {
+                fill: white;
+                width: 16px;
+            }
+        }
+        body {
+            background-color: #1A1B1F;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper text-center">
+        <div class="project-block">
+            <h2 class="text-4xl my-4">歷年開發專案</h3>
+            <h4 class="text-2xl mb-4 mt-6">React開發</h5>
+            <div class="grid grid-cols-3 gap-5">
+                <div >
+                    <div class="text-lg mb-3">
+                        智慧建築智慧雙生整合平台
+                    </div>
+                    <div class="large-slider-container">
+                        <div class="large-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/building-twin-integration-platform.jpg" alt="">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                   <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                                </svg>
+                             </div>
+                            <div class="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="text-lg mb-3">
+                        ESG智慧建築系統
+                    </div>
+                    <div class="large-slider-container">
+                        <div class="large-swiper">
+                            <div class="swiper-wrapper"> 
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/esg.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/esg-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">   
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/esg-2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">   
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/esg-4.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                   <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                                </svg>
+                            </div>
+                            <div class="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>	
+                </div>
+                <div class="">
+                    <div class="text-lg mb-3">
+                        停車管理系統(Vue)
+                    </div>
+                    
+                    <div class="large-slider-container">
+                        <div class="large-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/parking-system.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/parking-system-2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">   
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/parking-system-3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">   
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/parking-system-4.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                   <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                                </svg>
+                            </div>
+                            <div class="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>	
+    
+                  
+                </div>
+            </div>
+            <h4 class="text-2xl mb-4 mt-6">Vue+Nuxt開發</h4>
+            <div class="grid grid-cols-3 gap-5">
+                <div class="">
+                
+                    <div class="text-lg mb-3">
+                        楓之寶
+                        <br>
+
+                        <span class="text-sm">
+                            作品連結: 
+                            <a href="https://www.adriengagnon.com.hk/" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                   <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="large-slider-container">
+                        <div class="large-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/ag.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/ag-2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">   
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/ag-3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">   
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/parking-system-4.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                   <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                                </svg>
+                            </div>
+                            <div class="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="text-lg mb-3">
+                        House Of Beauty
+                        <br>
+                        <span class="text-sm">
+                            作品連結: 
+                            <a href="https://houseofbeauty.com.hk/" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                    
+                    <div class="large-slider-container">
+                        <div class="large-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/hob.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/hob-2.jpg" alt="">
+                                    </div>
+                                </div>
+                            
+                            </div>
+                             <div class="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                   <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                                </svg>
+                            </div>
+                            <div class="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="text-lg mb-3">
+                        耀中教育機構網站
+                        <br>
+                        <span class="text-sm">
+                            作品連結: 
+                            <a href="https://www.ycyw-edu.com/en" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                   <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                    
+                    <div class="large-slider-container">
+                        <div class="large-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/ycyw.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/ycyw-2.jpg" alt="">
+                                    </div>
+                                </div>
+                            
+                            </div>
+                             <div class="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                   <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                                </svg>
+                            </div>
+                            <div class="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="text-lg mb-3">
+                        CBI
+                        <br>
+                        <span class="text-sm">
+                            作品連結: 
+                            <a href="https://www.cbil.com.hk/zh-hk" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                   <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                    
+                    <div class="large-slider-container">
+                        <div class="large-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/CBI.jpg" alt="">
+                                    </div>
+                                </div> 
+                            </div>
+                             <div class="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                   <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                                </svg>
+                            </div>
+                            <div class="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="text-lg mb-3">
+                        Polyu
+                        <br>
+                        <span class="text-sm">
+                            作品連結: 
+                            <a href="https://soinnohub.polyujcsoinno.hk/" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                   <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+                                </svg>
+                            </a>
+                        </span>
+
+                   
+                    </div>
+                    
+                    <div class="large-slider-container">
+                        <div class="large-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-inside">
+                                        <img src="./image/Polyu.jpg" alt="">
+                                    </div>
+                                </div> 
+                            </div>
+                             <div class="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                   <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                                </svg>
+                            </div>
+                            <div class="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+  
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+
+ 
+
+    const largeSlider = ()=>{
+    let largeSliders = document.querySelectorAll('.large-swiper')
+    let prevArrow = document.querySelectorAll('.prev')
+    let nextArrow = document.querySelectorAll('.next')
+    largeSliders.forEach((slider, index)=>{
+    // this bit checks if there's more than 1 slide, if there's only 1 it won't loop
+        let sliderLength = slider.children[0].children.length
+        let result = (sliderLength > 1) ? true : false
+        const swiper = new Swiper(slider, {
+            direction: 'horizontal',
+            loop: result,
+            navigation: {
+        // the 'index' bit below is just the order of the class in the queryselectorAll array, so the first one would be NextArrow[0] etc
+                nextEl: nextArrow[index],
+                prevEl: prevArrow[index],
+            },
+            speed: 300,
+        });	
+    })
+}
+window.addEventListener('load', largeSlider)
+</script>
